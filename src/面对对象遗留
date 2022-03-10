@@ -1,0 +1,21 @@
+1.内部类
+        -在一个类的内部去定义类，叫做内部类
+            -普通内部类    A.AClass aClass = new A().new AClass();
+            -静态内部类    A.BClass bClass1 = new A.BClass();
+            -匿名内部类
+                -在java中，接口无法直接实例化对象，可以通过子类来实现实例化操作
+                在匿名内部类中，代码层面上可以直接new 接口，但本质还是通过子类来实例化，
+                只不过是一个没有名称的子类实例，
+                所以称为匿名内部类
+                public Message getDate(){
+
+                        //匿名内部类
+                        return new Message() {
+                            @Override
+                            public void getMessage() {
+                            }
+                        };
+
+2.静态代码块
+       -可以完成页面初始化相关功能
+       -可以在加载类的时候加载，只加载一次
